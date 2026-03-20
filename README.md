@@ -1,1 +1,2 @@
 # odin-recipes
+I made this project to test my new coding skills. I've entered all the commands through the terminal in VSCode. I'm trying hard not to use my mouse, even when creating folders and such. Hopefully at the end of this course I will be able to create a real website and not only crappy pages. But I guess we all have to start somewhere! xx
