@@ -1,19 +1,58 @@
+/* =========================================
+   VARIABILI COLORI
+   ========================================= */
+:root {
+  --colore-sfondo: #fef7e9;
+  --colore-testo: #5d4e3c;
+  --colore-contenitore: #fffaf2e6;
+  --colore-ombra: #e2bcb2;
+  --colore-bordo: #f9c7b6;
+  
+  --colore-titolo: #e86f68;
+  --colore-titolo-ombra: #fde2c3;
+  --colore-sottotitolo: #6a9c89;
+  --colore-sottotitolo-bordo: #f4b393;
+  
+  --colore-link: #d97a6e;
+  --colore-link-sfondo: #fce9db;
+  --colore-link-bordo: #fbb5a5;
+  --colore-link-hover-sfondo: #fbb5a5;
+  --colore-link-hover-testo: #ffffff;
+  
+  --colore-paragrafo-sfondo: #fae3d950;
+  --colore-lista-sfondo: #fdf3ec;
+  --colore-lista-bordo: #fbc4b4;
+  --colore-lista-ombra: #d6b2a2;
+  
+  --colore-immagine-bordo: #fdd7c8;
+  --colore-immagine-ombra: #d6b2a2;
+  
+  --colore-strong: #d44c4c;
+  --colore-em: #8fa88e;
+}
+
+/* =========================================
+   STILI DI BASE
+   ========================================= */
 body {
-  background-color: #fff9f0;
+  background-color: var(--colore-sfondo);
   font-family: 'Comic Sans MS', 'Chalkboard SE', 'Arial Rounded', sans-serif;
-  color: #5e4b3c;
+  color: var(--colore-testo);
   margin: 20px;
   text-align: center;
 }
 
+/* =========================================
+   CONTENITORE PRINCIPALE
+   ========================================= */
 .container {
   max-width: 700px;
   margin: 0 auto;
-  background-color: #ffffffd9;
+  background-color: var(--colore-contenitore);
   padding: 25px 20px;
   border-radius: 30px;
-  box-shadow: 0 6px 0 #e6c9b2;
-  border: 2px dashed #f7b3a4;
+  box-shadow: 0 6px 0 var(--colore-ombra);
+  border: 2px dashed var(--colore-bordo);
   text-align: center;
 }
 
@@ -21,62 +60,77 @@ body {
   text-align: left;
 }
 
+/* =========================================
+   TITOLI
+   ========================================= */
 h1 {
-  color: #e07a5f;
+  color: var(--colore-titolo);
   font-size: 2.5rem;
-  text-shadow: 3px 3px 0 #ffe0b2;
+  text-shadow: 3px 3px 0 var(--colore-titolo-ombra);
   margin: 10px 0 20px 0;
 }
 
 h2 {
-  color: #81b29a;
-  border-bottom: 3px dotted #f4a261;
+  color: var(--colore-sottotitolo);
+  border-bottom: 3px dotted var(--colore-sottotitolo-bordo);
   display: inline-block;
   padding-bottom: 5px;
   margin: 20px 0 10px 0;
 }
 
+/* =========================================
+   IMMAGINI
+   ========================================= */
 img {
   display: block;
   margin: 20px auto;
   max-width: 300px;
   border-radius: 20px;
-  border: 4px solid #fae1dd;
-  box-shadow: 5px 5px 0 #d5bdaf;
+  border: 4px solid var(--colore-immagine-bordo);
+  box-shadow: 5px 5px 0 var(--colore-immagine-ombra);
 }
 
+/* =========================================
+   LINK E BOTTONI
+   ========================================= */
 a {
-  color: #e5989b;
+  color: var(--colore-link);
   text-decoration: none;
   font-weight: bold;
-  background-color: #fff1e6;
+  background-color: var(--colore-link-sfondo);
   padding: 5px 12px;
   border-radius: 40px;
-  border: 2px solid #ffb5a7;
+  border: 2px solid var(--colore-link-bordo);
   display: inline-block;
   margin: 5px;
 }
 
 a:hover {
-  background-color: #ffb5a7;
-  color: white;
+  background-color: var(--colore-link-hover-sfondo);
+  color: var(--colore-link-hover-testo);
 }
 
+/* =========================================
+   PARAGRAFI
+   ========================================= */
 p {
-  background-color: #fae1dd50;
+  background-color: var(--colore-paragrafo-sfondo);
   padding: 12px 18px;
   border-radius: 20px;
   margin: 15px 0;
   line-height: 1.5;
 }
 
+/* =========================================
+   LISTE (INGREDIENTI E PASSAGGI)
+   ========================================= */
 ul, ol {
-  background-color: #fef7f2;
-  border: 3px solid #fcd5ce;
+  background-color: var(--colore-lista-sfondo);
+  border: 3px solid var(--colore-lista-bordo);
   border-radius: 25px;
   padding: 15px 15px 15px 40px;
   margin: 15px 0;
-  box-shadow: inset 0 0 0 2px #fff, 0 4px 0 #d5bdaf;
+  box-shadow: inset 0 0 0 2px #fff, 0 4px 0 var(--colore-lista-ombra);
 }
 
 li {
@@ -84,6 +138,7 @@ li {
   text-align: left;
 }
 
+/* Lista homepage centrata */
 .container:not(.recipe-page) > ul {
   display: inline-block;
   text-align: left;
@@ -92,6 +147,7 @@ li {
   list-style: none;
 }
 
+/* Liste nelle pagine ricetta */
 .recipe-page ul,
 .recipe-page ol {
   display: block;
@@ -100,10 +156,13 @@ li {
   width: auto;
 }
 
+/* =========================================
+   ELEMENTI INLINE (GRASSETTO E CORSIVO)
+   ========================================= */
 strong {
-  color: #d00000;
+  color: var(--colore-strong);
 }
 
 em {
-  color: #a98467;
+  color: var(--colore-em);
 }
